@@ -1,0 +1,25 @@
+{
+  "name": "browser-sync-instance",
+  "version": "0.0.0",
+  "description": "Require an instance of BrowserSync, instead of a singleton.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/basham/browser-sync-instance.git"
+  },
+  "keywords": [
+    "BrowserSync"
+  ],
+  "author": "Chris Basham <chris@bash.am> (http://bash.am)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basham/browser-sync-instance/issues"
+  },
+  "homepage": "https://github.com/basham/browser-sync-instance",
+  "dependencies": {
+    "browser-sync": "^1.3.7"
+  }
+}
