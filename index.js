@@ -16,7 +16,14 @@ var info          = cli.info;
 var argv          = process.argv;
 var args          = require("./node_modules/browser-sync/node_modules/minimist")(argv.slice(2));
 
-function instance() {
+var _instances = {};
+
+function instance(name) {
+
+  // Find an instantiated instance.
+  if( _instances.hasOwnProperty(name) ) {
+    return _instances[name];
+  }
 
   var _this = {};
 
@@ -124,6 +131,11 @@ function instance() {
    * @method exit
    */
   _this.exit = require("./node_modules/browser-sync/lib/public/exit")(browserSync);
+
+  // Save the instance if it's named.
+  if( name ) {
+    _instances[name] = _this;
+  }
 
   return _this;
 }
