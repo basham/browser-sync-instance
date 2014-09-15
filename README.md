@@ -32,12 +32,13 @@ gulp.task('browser-sync', function() {
 
 });
 
-gulp.task('reload', function() {
-  bsProxy.reload();
+gulp.task('styles', function() {
+  return gulp.src('src/**/*.css')
+    .pipe(bsProxy.reload({ stream: true }));
 });
 
 gulp.task('watch', ['browser-sync'], function() {
-  gulp.watch('src/**/*.css', ['reload']);
+  gulp.watch('src/**/*.css', ['styles']);
 });
 
 gulp.task('default', ['watch']);
