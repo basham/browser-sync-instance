@@ -78,3 +78,11 @@ var gulp = require('gulp');
 
 gulp.task('default', ['watch']);
 ```
+
+```js
+// ./gulpfile.js
+
+// Install `require-directory` or require each task individually.
+// https://github.com/troygoode/node-require-directory
+require('require-directory')(module, './tasks');
+```
