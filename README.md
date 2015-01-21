@@ -2,6 +2,8 @@
 
 Require an instance of [BrowserSync](https://github.com/shakyShane/browser-sync), instead of a singleton.
 
+**This project is now depreciated because [the multi-instance feature is being officially implemented](https://github.com/shakyShane/browser-sync/issues/172#issuecomment-68134939). See the [`multi-instance` feature branch](https://github.com/shakyShane/browser-sync/tree/feature/multi-instance) for progress.**
+
 ## Install
 
 ```
